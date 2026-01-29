@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark: #0f172a;
+  --color-primary: #3b82f6;
+  --color-secondary: #60a5fa;
+  --color-light: #f8fafc;
+  --color-primary-hover: #2563eb;
+  --color-secondary-hover: #93c5fd;
+  --color-card: rgba(15, 23, 42, 0.6);
+  --color-card-border: rgba(59, 130, 246, 0.2);
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2.5 rounded-lg font-medium transition-all duration-200;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+  }
+  .btn-secondary {
+    @apply px-5 py-2.5 rounded-lg font-medium transition-all duration-200 border;
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #93c5fd;
+    background: transparent;
+  }
+  .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: #60a5fa;
+  }
+  .card-base {
+    @apply rounded-xl p-6 transition-all duration-200;
+    background: rgba(15, 23, 42, 0.7);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+  }
+  .card-base:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+  }
+  .nav-link {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+    color: #cbd5e1;
+  }
+  .nav-link:hover {
+    background: rgba(59, 130, 246, 0.2);
+    color: #93c5fd;
+  }
+  .nav-link.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+  }
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg border outline-none transition-colors duration-200;
+    border-color: rgba(59, 130, 246, 0.3);
+    background: rgba(15, 23, 42, 0.8);
+    color: #f1f5f9;
+  }
+  .input-field:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 35%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 65%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 217 91% 60%;
+  }
+  * {
+    @apply border-slate-700/50;
+  }
+}
