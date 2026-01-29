@@ -2,6 +2,8 @@
 
 AI-based parts identification and inventory system. Phase 1 is web-only: upload images, manage parts library, view scan results (only unrecognized/low-confidence boxed), adjust inventory, and generate invoices.
 
+<img width="1905" height="942" alt="image" src="https://github.com/user-attachments/assets/3e4fa0c5-e007-4e6a-92ad-6651b1a76f45" />
+
 ## Tech stack
 
 - **Frontend**: Next.js 14 (React), TypeScript, Tailwind CSS
